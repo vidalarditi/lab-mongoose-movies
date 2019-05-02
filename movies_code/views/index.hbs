@@ -1,0 +1,18 @@
+<h1>List of All Movies</h1>
+
+<a href="/movie-add">Add Movie</a>
+
+<ul>
+  {{#each movies}}
+    <li>Title: {{title}} 
+    / Year: {{year}} 
+    / Director: {{director}} 
+    / Duration: {{duration}} 
+    <a href="/detail?id={{_id}}">Click for details</a>
+    <a href="/movie-delete?id={{_id}}">
+      <button type="submit">Delete</button>
+    </a>
+    <a href="/movie-edit?id={{_id}}">Edit</a>
+    </li>
+  {{/each}} 
+</ul>
